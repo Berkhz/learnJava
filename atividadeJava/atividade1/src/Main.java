@@ -13,7 +13,7 @@ public class Main {
         System.out.println("2 - Transporte Náutico");
         int expressao = scanner.nextInt();
         switch (expressao) {
-            case 1:
+            case 1:                                   
                 System.out.println("Valor da altura?");
                 Double alturaTerrestre = scanner.nextDouble();
 
