@@ -3,7 +3,7 @@ package br.edu.unicesumar.crud.model.domain;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "ES_PESSOA") 
+@Table(name = "ES_PESSOA")  // para tabelas com nome diferente da entidade
 public class Pessoa {
 
     @Id
@@ -12,7 +12,7 @@ public class Pessoa {
 
     private String nome;
 
-    @Column(name = "doc", length = 14)
+    @Column(name = "doc", length = 14) // se necessário, informar atribuições para a coluna
     private String documento;
 
 
@@ -24,6 +24,8 @@ public class Pessoa {
 
     public Pessoa() {
     }
+
+    // getters e setters necessários para serializar e deserializar a classe para json
 
     public Long getId() {
         return id;
