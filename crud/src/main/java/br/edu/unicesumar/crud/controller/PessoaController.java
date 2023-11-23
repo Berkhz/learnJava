@@ -29,6 +29,17 @@ public class PessoaController {
         return pessoaRepository.save(nova);
     }
 
+    @PutMapping("/{id}")
+    public Pessoa update(@PathVariable Long id, @RequestBody Pessoa pessoaAtualizada) {
+        return pessoaRepository.findById(id)
+                .map(pessoa -> {
+                    pessoa.setNome(pessoaAtualizada.getNome());
+                    pessoa.setDocumento(pessoaAtualizada.getDocumento());
+                    return pessoaRepository.save(pessoa);
+                })
+                .orElse(null);
+    }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         pessoaRepository.deleteById(id);
