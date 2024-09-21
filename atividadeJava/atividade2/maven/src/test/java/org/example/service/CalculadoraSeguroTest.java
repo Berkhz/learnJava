@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class CalculadoraSeguroTest {
     @Test
     public void deveCalcularSolteiroSemEstacionamento(Pessoa pessoa, Estacionamento estacionamento,
-                                                      Automovel automovel, ) {
+                                                      Automovel automovel ) {
 
     }
 }
